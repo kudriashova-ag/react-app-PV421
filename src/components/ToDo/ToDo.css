@@ -1,0 +1,30 @@
+.todo-list{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.filters{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-btn{
+    margin-left: auto;
+    cursor: pointer;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.done{
+    text-decoration: line-through;
+}
