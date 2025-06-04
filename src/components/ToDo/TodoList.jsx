@@ -9,16 +9,35 @@ const TodoList = () => {
   const [taskList, setTaskList] = useState(tasks);
 
   const addTask = (title) => {
-    setTaskList([...taskList, { id: new Date().getTime(), title, done: false }]);
+    setTaskList([
+      ...taskList,
+      { id: new Date().getTime(), title, done: false },
+    ]);
   };
 
-  const deleteTask = (id) => { 
+  const deleteTask = (id) => {
     setTaskList(taskList.filter((task) => task.id !== id));
-  }
+  };
 
   const toggleDone = (id) => {
-    
-   }
+    const newTasks = taskList.map((task) => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    });
+    setTaskList(newTasks);
+  };
+
+  const updateTask = (id, title) => {
+    const newTasks = taskList.map((task) => {
+      if (task.id === id) {
+        return { ...task, title };
+      }
+      return task;
+    });
+    setTaskList(newTasks);
+  };
 
   return (
     <div className="todo-list">
@@ -27,7 +46,13 @@ const TodoList = () => {
       <Filters />
 
       {taskList.map((task) => (
-        <Task task={task} key={task.id} deleteTask={deleteTask} />
+        <Task
+          task={task}
+          key={task.id}
+          deleteTask={deleteTask}
+          toggleDone={toggleDone}
+          updateTask={updateTask}
+        />
       ))}
     </div>
   );
