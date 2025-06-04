@@ -7,6 +7,7 @@ import tasks from "./TasksData";
 
 const TodoList = () => {
   const [taskList, setTaskList] = useState(tasks);
+
   const addTask = (title) => {
     setTaskList([...taskList, { id: new Date().getTime(), title, done: false }]);
   };
@@ -14,6 +15,8 @@ const TodoList = () => {
   const deleteTask = (id) => { 
     setTaskList(taskList.filter((task) => task.id !== id));
   }
+
+  const toggleDone = (id) => { }
 
 
 

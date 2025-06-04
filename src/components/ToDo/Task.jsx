@@ -6,7 +6,9 @@ const Task = ({ task, deleteTask }) => {
       <div className="task">
         <input type="checkbox" defaultChecked={task.done} />
         <span className={task.done ? "done" : ""}>{task.title}</span>
-        <button className="delete-btn" onClick={() => deleteTask(task.id)}>Delete</button>
+        <button className="delete-btn" onClick={() => deleteTask(task.id)}>
+          Delete
+        </button>
       </div>
     );
 }
