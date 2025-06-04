@@ -16,9 +16,9 @@ const TodoList = () => {
     setTaskList(taskList.filter((task) => task.id !== id));
   }
 
-  const toggleDone = (id) => { }
-
-
+  const toggleDone = (id) => {
+    
+   }
 
   return (
     <div className="todo-list">
