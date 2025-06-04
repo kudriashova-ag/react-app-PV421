@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Filters = () => {
+const Filters = ({ setFilter, filter, allFilters }) => {
+    const filters = Object.keys(allFilters); // ['All', 'Done', 'Todo']
+
     return (
         <div className='filters'>
-            <button>All</button>
-            <button>Done</button>
-            <button>Todo</button>
+            {filters.map((f) => (
+                <button key={f} onClick={() => setFilter(f)} className={filter === f ? 'active' : ''}>{f}</button>
+            ))}
         </div>
     );
 }

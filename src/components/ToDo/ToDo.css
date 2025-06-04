@@ -28,3 +28,8 @@
 .done{
     text-decoration: line-through;
 }
+
+.active{
+    background-color: dodgerblue;
+    color: #fff;
+}
