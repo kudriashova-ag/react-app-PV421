@@ -15,6 +15,7 @@ const Header = () => {
           <NavLink to="/todo">ToDo</NavLink>
           <NavLink to="/first">First</NavLink>
           <NavLink to="/register">Register</NavLink>
+          <NavLink to="/users">Users</NavLink>
         </nav>
 
         <ThemeSwitcher />
