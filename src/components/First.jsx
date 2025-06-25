@@ -1,31 +1,16 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './First.css';
+import counterReducer from '../reducers/counterReducer';
 
 const First = () => {
-    const title = 'Hello World';
-
-    const authorized = true;
-    const loading = true;
-
-    const templateAuthorized = (
-        <p>Authorized</p>
-    );
-
-    const templateUnauthorized = (
-        <p>Unauthorized</p>
-    );
-    
-    if (loading) {
-        return <h1>Loading...</h1>
-    }
+    const [count, dispatch] = useReducer(counterReducer, 0);
 
     return (
         <>
-            <h1 className="title">{title} { Math.random() }</h1>
-            <p style={{ color: 'red' }}>Lorem, ipsum dolor.</p>
-            {authorized ? <p>Authorized</p> : <p>Unauthorized</p>}
-            {authorized && <p>Authorized</p>}
-            {authorized ? templateAuthorized : templateUnauthorized}
+            <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+            {count}
+            <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+            <button onClick={() => dispatch({ type: 'increment2', payload: 2 })}>+2</button>
         </>
         
     );

@@ -1,25 +1,21 @@
-import Counters from './components/Example/Counters';
-import EventState from './components/Example/EventState';
-import First from './components/First';
-import TodoList from './components/ToDo/TodoList';
+import { Outlet } from "react-router";
+import Header from "./components/Templates/Header";
+import ThemeProvider from "./providers/ThemeProvider";
 
 function App() {
+
+
   return (
     <div>
-      {/* <First /> */}
-      {/* <EventState /> */}
+        <ThemeProvider>
+          <Header />
 
-      {/* <TodoList /> */}
-
-      <Counters />
+          <Outlet />
+        </ThemeProvider>
     </div>
   );
 }
 
 export default App;
 
-// Загальний
-// форма Додавання
-// Фільтри
 
-// задача

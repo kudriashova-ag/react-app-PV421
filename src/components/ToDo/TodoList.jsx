@@ -50,6 +50,7 @@ const TodoList = () => {
       return task;
     });
     setTaskList(newTasks);
+    
   };
 
   const updateTask = (id, title) => {

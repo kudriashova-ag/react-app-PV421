@@ -6,3 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+body.dark{
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+body.dark h1{
+  color: dodgerblue
+}
