@@ -9,15 +9,16 @@ const Header = () => {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <header className={`theme-${theme}`}>
-            <nav>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/todo">ToDo</NavLink>
-                <NavLink to="/first">First</NavLink>
-            </nav>
+      <header className={`theme-${theme}`}>
+        <nav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/todo">ToDo</NavLink>
+          <NavLink to="/first">First</NavLink>
+          <NavLink to="/register">Register</NavLink>
+        </nav>
 
-            <ThemeSwitcher />
-        </header>
+        <ThemeSwitcher />
+      </header>
     );
 }
 
