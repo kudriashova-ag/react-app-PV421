@@ -13,6 +13,11 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
+                index: true,
+                element: <h1>Home</h1>
+            },
+
+            {
                 path: "/todo",
                 element: <TodoList />
             },
@@ -36,13 +41,13 @@ const router = createBrowserRouter([
                     }
                 ]
             },
-           
-           
-           /* якщо потрібна окрема сторінка {
-                path: "/users/:id",
-                loader: getUser,
-                element: <User />
-            }, */
+
+
+            /* якщо потрібна окрема сторінка {
+                 path: "/users/:id",
+                 loader: getUser,
+                 element: <User />
+             }, */
         ]
     },
 
